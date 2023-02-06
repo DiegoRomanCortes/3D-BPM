@@ -23,24 +23,25 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <fftw3.h>
 
 int main(){    
-    // points
+    // number of points in grid
     int Nx = 200;
     int Ny = 200;
     int Nz = 200;
     
     // parameters
-    double n0 = 1.48;
-    double l0 = 685E-9;
-    double alpha = 11E-6;
-    double wx = 10E-6;
-    double wy = wx * 1.6;
-    double Lx = 100E-6;
-    double Ly = 100E-6;
+    double n0 = 1.48; // refraction index of borosilicate 
+    double l0 = 685E-9; // wavelenght of light
+    double alpha = 11E-6; // width parameter in 2D Gaussian beam e^(-(x^2+y^2)/alpha^2)
+    double wx = 10E-6; // width of the waveguide 
+    double wy = wx * 1.6; // height of the waveguide
+    double Lx = 100E-6; // width of the grid
+    double Ly = 100E-6; // height of the grid
 
-    double zmax = 5E-3;//1.6E-3;
+    double zmax = 5E-3; // propagation distance
 
-    double super_gaussian_power = 2.5;
-
+    double super_gaussian_power = 2.5; // exponent of super-gaussian waveguide
+    
+    // auxiliar variables
     double dx = Lx/Nx;
     double dy = Ly/Ny;
     double dz = zmax/Nz;
@@ -49,11 +50,13 @@ int main(){
     double xi, yj;
 
     double* dn = malloc(sizeof(double) * Nx * Ny);
-    double dn1 = 4E-4;
-    double dn2 = dn1;
+    
+    // dimer setup
+    double dn1 = 4E-4; // contrast of first waveguide
+    double dn2 = dn1; // contrast of first waveguide
 
-    double d1x = 0;
-    double d1y = 18E-6;
+    double d1x = 0; // X separation of waveguides
+    double d1y = 18E-6; // Y separation of waveguides
     
     int i, j, k;
 
@@ -77,6 +80,7 @@ int main(){
         }
     }
     
+    // save the input (gaussian) in a text file
     fp1 = freopen("input2d.txt", "w", stdout);
     
     // initial field (gaussian)
@@ -116,6 +120,7 @@ int main(){
         }
     }
     
+    // save the output result of propagation in a text file
     fp2 = freopen("output2d.txt", "w", stdout);
 
 
