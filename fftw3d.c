@@ -1,4 +1,4 @@
-// Saves into a text file the output of a gaussian light beam propagating in a waveguide
+// Saves into a text file, read and save with gnuplot the output of a gaussian light beam propagating in a 1D waveguide array
 
 /*
 Copyright (C) 2023  Diego Roman-Cortes
