@@ -24,9 +24,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 int main(){    
     // number of points in grid
-    int Nx = 200;
-    int Ny = 200;
-    int Nz = 200;
+    int Nx = 500;
+    int Ny = 500;
+    int Nz = 500;
     
     // parameters
     double n0 = 1.48; // refraction index of borosilicate 
@@ -37,7 +37,7 @@ int main(){
     double Lx = 300E-6; // width of the grid
     double Ly = 100E-6; // height of the grid
 
-    double zmax = 5E-3; // propagation distance
+    double zmax = 20E-3; // propagation distance
 
     double super_gaussian_power = 3; // exponent of super-gaussian waveguide
     
