@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "complex.h": "c",
+        "complex": "c",
+        "gsl_linalg.h": "c",
+        "gsl_vector.h": "c",
+        "gsl_complex.h": "c",
+        "wait.h": "c",
+        "types.h": "c"
+    }
+}
