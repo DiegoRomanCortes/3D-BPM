@@ -6,6 +6,12 @@
         "gsl_vector.h": "c",
         "gsl_complex.h": "c",
         "wait.h": "c",
-        "types.h": "c"
+        "types.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "*.p": "c",
+        "numbers": "c",
+        "gsl_sf_laguerre.h": "c",
+        "string.h": "c"
     }
 }
